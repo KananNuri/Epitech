@@ -1,0 +1,46 @@
+.box {
+    border: 2px solid black;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+body {
+    background-color: grey;
+}
+
+.box {
+    background-color: white;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+.content {
+    display: flex;
+}
+
+.content main {
+    flex: 0 0 80%;
+}
+
+.content aside {
+    flex: 1;
+}
+
+.moving_square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: moving-square 5s 5;
+}
+
+@keyframes moving-square {
+    0% { transform: translate(0, 0); background-color: red; }
+    25% { transform: translate(0, 300px); background-color: green; }
+    50% { transform: translate(300px, 300px); background-color: blue; }
+    75% { transform: translate(300px, 0); background-color: yellow; }
+    100% { transform: translate(0, 0); background-color: red; }
+}
